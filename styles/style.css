@@ -7,9 +7,16 @@ body{
     background-color: navy;
 }
 
+.title{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    margin-top: 2%;
+}
+
 .container{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 55%;
     width: 800px;
     transform: translate(-50%,-50%);
@@ -18,8 +25,9 @@ body{
     flex-wrap: wrap;
 }
 
-.container:hover .card{
+.flip{
     transform: rotateY(-180deg);
+    pointer-events: none;
 }
 
 .card{
@@ -47,3 +55,11 @@ body{
     background: url(../assets/js.jpg) no-repeat center;
     transform: rotateY(-180deg);
 }
+
+.result{
+    margin: 2% 26%;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
