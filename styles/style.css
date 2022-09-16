@@ -1,40 +1,49 @@
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 
 body{
-    height: 100%;
     background-color: navy;
 }
 
-.memory{
-    margin-top: 5%;
-    width: 640px;
-    height: 340px;
+.container{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 800px;
+    transform: translate(-50%,-50%);
+    perspective: 1200;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
-    border: 2px solid white;
+}
+
+.container:hover .card{
+    transform: rotateY(-180deg);
 }
 
 .card{
-    width: 33.33%;
-    height: 50%;
-    position: relative;
-    padding: 2%;
-    background-color: aqua;
-    border: 2px solid white;
+    padding: 1%;
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
 }
 
-.front , .back{
+.front, .back{
+    width: 200px;
+    height: 200px;
     position: absolute;
-    width: 100%;
-    height: 30%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
 }
 
-img{
-    width: 90px;
+.front{
+    background: url(../assets/css.png) no-repeat center;
 }
 
+.back{
+    background: url(../assets/js.jpg) no-repeat center;
+    transform: rotateY(-180deg);
+}
